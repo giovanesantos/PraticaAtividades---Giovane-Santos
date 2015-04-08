@@ -1,0 +1,9 @@
+/bin/
+/classes/.*
+/.myeclipse/.*
+.*rebel\.xml
+/.settings/.*
+/target/.*
+/.classpath
+/.project
+/iss-.*-parent/.*
