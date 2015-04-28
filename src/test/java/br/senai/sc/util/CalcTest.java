@@ -1,16 +1,20 @@
 package br.senai.sc.util;
 
+import junit.framework.TestCase;
+
 import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
-import static org.junit.Assert.*;
-import junit.framework.TestCase;
 
 public class CalcTest extends TestCase {
 
-	public CalculaTest() {
+	private Calc instance;
+	private Calc instance2;
+	private Calc instance3;
+
+	public void CalculaTest() {
     }
  
     @BeforeClass
@@ -34,9 +38,8 @@ public class CalcTest extends TestCase {
     public void testSomar() {
         int valor1 = 8;
         int valor2 = 2;
-        Calcular instance = new Calcular();
         double expResult = 10.0;
-        double result = instance.somar(n1, n2);
+        double result = Calc.somar(valor1, valor2);
         assertEquals(expResult, result, 0);
     }
  
@@ -44,9 +47,9 @@ public class CalcTest extends TestCase {
     public void testSubtrair() {
         int valor1 = 10;
         int valor2 = 5;
-        Calcular instance = new Calcular();
+        setInstance(new Calc());
         double expResult = 5;
-        double result = instance.subtrair(valor1, valor2);
+        double result = Calc.subtrair(valor1, valor2);
         assertEquals(expResult, result, 0);
     }
  
@@ -54,9 +57,9 @@ public class CalcTest extends TestCase {
     public void testMultiplicar() {
         int valor1 = 2;
         int valor2 = 5;
-        Calcular instance = new Calcular();
+        setInstance2(new Calc());
         double expResult = 10;
-        double result = instance.multiplicar(valor1, valor2);
+        double result = Calc.multiplica(valor1, valor2);
         assertEquals(expResult, result, 0);
     }
  
@@ -64,10 +67,34 @@ public class CalcTest extends TestCase {
     public void testDividir() {
         int valor1 = 5;
         int valor2 = 2;
-        Calcular instance = new Calcular();
+        setInstance3(new Calc());
         double expResult = 2.5;
-        double result = instance.dividir(valor1, valor2);
+        double result = Calc.dividir(valor1, valor2);
         assertEquals(expResult, result, 0);
     }
+
+	public Calc getInstance() {
+		return instance;
+	}
+
+	public void setInstance(Calc instance) {
+		this.instance = instance;
+	}
+
+	public Calc getInstance2() {
+		return instance2;
+	}
+
+	public void setInstance2(Calc instance2) {
+		this.instance2 = instance2;
+	}
+
+	public Calc getInstance3() {
+		return instance3;
+	}
+
+	public void setInstance3(Calc instance3) {
+		this.instance3 = instance3;
+	}
  
 }

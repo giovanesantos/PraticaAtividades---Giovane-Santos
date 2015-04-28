@@ -1,25 +1,26 @@
 package br.senai.sc.util;
+
+import javax.swing.JOptionPane;
  
 public class CalcPrincipal {
 	
-	publci static void main(String args []){
+	public static void main(String args []){
 		
 		int x;
 		int y;
 		String sX;
-		String Sy;
 		
 		sX = JOptionPane.showInputDialog (null, " Digite o valor 1:" );
 		x = Integer.parseInt (sX);
 		
-		sY = JOptionPane.showInputDialog (null, "Digite o valor 2:" );
+		String sY = JOptionPane.showInputDialog (null, "Digite o valor 2:" );
 		y = Integer.parseInt (sY);
 		
 	
-		JOptionPane.showMessageDialog(null, "Resultado da Soma: " +  calc.soma( x, y ) );
-        JOptionPane.showMessageDialog(null, "Resultado da  SubtraÁ„o: " +  calc.subtrair( x, y ) );
-        JOptionPane.showMessageDialog(null, "Resultado da MultiplicaÁ„o: " +  calc.multiplica( x, y ) );
-        JOptionPane.showMessageDialog(null, "Resultado da Divis„o: " +  calc.dividir( x, y ) );    
+		JOptionPane.showMessageDialog(null, "Resultado da Soma: " +  Calc.somar( x, y ) );
+        JOptionPane.showMessageDialog(null, "Resultado da  Subtra√ß√£o: " +  Calc.subtrair( x, y ) );
+        JOptionPane.showMessageDialog(null, "Resultado da Multipli√ß√£o: " +  Calc.multiplica( x, y ) );
+        JOptionPane.showMessageDialog(null, "Resultado da Divis√£o: " +  Calc.dividir( x, y ) );    
  
         System.exit( 0 );
     }	
