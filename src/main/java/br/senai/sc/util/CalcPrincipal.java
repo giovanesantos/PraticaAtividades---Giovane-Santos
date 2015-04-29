@@ -8,9 +8,8 @@ public class CalcPrincipal {
 		
 		int x;
 		int y;
-		String sX;
 		
-		sX = JOptionPane.showInputDialog (null, " Digite o valor 1:" );
+		String sX = JOptionPane.showInputDialog (null, " Digite o valor 1:" );
 		x = Integer.parseInt (sX);
 		
 		String sY = JOptionPane.showInputDialog (null, "Digite o valor 2:" );
